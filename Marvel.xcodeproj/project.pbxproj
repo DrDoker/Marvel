@@ -10,9 +10,10 @@
 		C5A1D032291311740035D740 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A1D031291311740035D740 /* AppDelegate.swift */; };
 		C5A1D034291311740035D740 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A1D033291311740035D740 /* SceneDelegate.swift */; };
 		C5A1D036291311740035D740 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A1D035291311740035D740 /* ViewController.swift */; };
-		C5A1D039291311740035D740 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A1D037291311740035D740 /* Main.storyboard */; };
 		C5A1D03B291311750035D740 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5A1D03A291311750035D740 /* Assets.xcassets */; };
 		C5A1D03E291311750035D740 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A1D03C291311750035D740 /* LaunchScreen.storyboard */; };
+		C5A1D04B291315DD0035D740 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C5A1D04A291315DD0035D740 /* Alamofire */; };
+		C5A1D04E291316AC0035D740 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C5A1D04D291316AC0035D740 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +21,6 @@
 		C5A1D031291311740035D740 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5A1D033291311740035D740 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C5A1D035291311740035D740 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C5A1D038291311740035D740 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C5A1D03A291311750035D740 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5A1D03D291311750035D740 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5A1D03F291311750035D740 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,6 +31,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5A1D04B291315DD0035D740 /* Alamofire in Frameworks */,
+				C5A1D04E291316AC0035D740 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +58,46 @@
 		C5A1D030291311740035D740 /* Marvel */ = {
 			isa = PBXGroup;
 			children = (
-				C5A1D031291311740035D740 /* AppDelegate.swift */,
-				C5A1D033291311740035D740 /* SceneDelegate.swift */,
-				C5A1D035291311740035D740 /* ViewController.swift */,
-				C5A1D037291311740035D740 /* Main.storyboard */,
+				C5A1D045291314A50035D740 /* Sources */,
+				C5A1D046291314C50035D740 /* Resources */,
+			);
+			path = Marvel;
+			sourceTree = "<group>";
+		};
+		C5A1D045291314A50035D740 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C5A1D047291314F30035D740 /* App */,
+				C5A1D048291315040035D740 /* ViewControllers */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		C5A1D046291314C50035D740 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				C5A1D03A291311750035D740 /* Assets.xcassets */,
 				C5A1D03C291311750035D740 /* LaunchScreen.storyboard */,
 				C5A1D03F291311750035D740 /* Info.plist */,
 			);
-			path = Marvel;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C5A1D047291314F30035D740 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C5A1D031291311740035D740 /* AppDelegate.swift */,
+				C5A1D033291311740035D740 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C5A1D048291315040035D740 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C5A1D035291311740035D740 /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +116,10 @@
 			dependencies = (
 			);
 			name = Marvel;
+			packageProductDependencies = (
+				C5A1D04A291315DD0035D740 /* Alamofire */,
+				C5A1D04D291316AC0035D740 /* SnapKit */,
+			);
 			productName = Marvel;
 			productReference = C5A1D02E291311740035D740 /* Marvel.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +148,10 @@
 				Base,
 			);
 			mainGroup = C5A1D025291311740035D740;
+			packageReferences = (
+				C5A1D049291315DD0035D740 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C5A1D04C291316AC0035D740 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = C5A1D02F291311740035D740 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +168,6 @@
 			files = (
 				C5A1D03E291311750035D740 /* LaunchScreen.storyboard in Resources */,
 				C5A1D03B291311750035D740 /* Assets.xcassets in Resources */,
-				C5A1D039291311740035D740 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,14 +187,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C5A1D037291311740035D740 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C5A1D038291311740035D740 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C5A1D03C291311750035D740 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,10 +321,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N2XAP4CLZT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Marvel/Info.plist;
+				INFOPLIST_FILE = Marvel/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -317,10 +348,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N2XAP4CLZT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Marvel/Info.plist;
+				INFOPLIST_FILE = Marvel/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +388,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C5A1D049291315DD0035D740 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		C5A1D04C291316AC0035D740 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C5A1D04A291315DD0035D740 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5A1D049291315DD0035D740 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		C5A1D04D291316AC0035D740 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5A1D04C291316AC0035D740 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C5A1D026291311740035D740 /* Project object */;
 }
