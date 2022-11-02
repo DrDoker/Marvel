@@ -54,14 +54,46 @@
 		C5A1D030291311740035D740 /* Marvel */ = {
 			isa = PBXGroup;
 			children = (
-				C5A1D031291311740035D740 /* AppDelegate.swift */,
-				C5A1D033291311740035D740 /* SceneDelegate.swift */,
-				C5A1D035291311740035D740 /* ViewController.swift */,
+				C5A1D045291314A50035D740 /* Sources */,
+				C5A1D046291314C50035D740 /* Resources */,
+			);
+			path = Marvel;
+			sourceTree = "<group>";
+		};
+		C5A1D045291314A50035D740 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C5A1D047291314F30035D740 /* App */,
+				C5A1D048291315040035D740 /* ViewControllers */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		C5A1D046291314C50035D740 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				C5A1D03A291311750035D740 /* Assets.xcassets */,
 				C5A1D03C291311750035D740 /* LaunchScreen.storyboard */,
 				C5A1D03F291311750035D740 /* Info.plist */,
 			);
-			path = Marvel;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C5A1D047291314F30035D740 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C5A1D031291311740035D740 /* AppDelegate.swift */,
+				C5A1D033291311740035D740 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C5A1D048291315040035D740 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C5A1D035291311740035D740 /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,7 +309,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N2XAP4CLZT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Marvel/Info.plist;
+				INFOPLIST_FILE = Marvel/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -304,7 +336,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N2XAP4CLZT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Marvel/Info.plist;
+				INFOPLIST_FILE = Marvel/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
