@@ -26,9 +26,10 @@ extension ViewController {
 		request.responseDecodable(of: CharactersApiResponse.self) { (data) in
 			guard let data = data.value else { return }
 			data.charactersData.characters.forEach { (character) in
-				print(character.name)
-				print(character.description)
 				print()
+				print(character.name)
+				print(character.thumbnail.thumbnailURL)
+				print(character.description)
 			}
 		}
 	}
