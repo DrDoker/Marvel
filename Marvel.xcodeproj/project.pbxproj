@@ -14,6 +14,7 @@
 		C5A1D03E291311750035D740 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A1D03C291311750035D740 /* LaunchScreen.storyboard */; };
 		C5A1D04B291315DD0035D740 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C5A1D04A291315DD0035D740 /* Alamofire */; };
 		C5A1D04E291316AC0035D740 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C5A1D04D291316AC0035D740 /* SnapKit */; };
+		C5A1D051291319A20035D740 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A1D050291319A20035D740 /* Characters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C5A1D03A291311750035D740 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5A1D03D291311750035D740 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5A1D03F291311750035D740 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5A1D050291319A20035D740 /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				C5A1D047291314F30035D740 /* App */,
+				C5A1D04F2913185A0035D740 /* Model */,
 				C5A1D048291315040035D740 /* ViewControllers */,
 			);
 			path = Sources;
@@ -98,6 +101,14 @@
 				C5A1D035291311740035D740 /* ViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C5A1D04F2913185A0035D740 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C5A1D050291319A20035D740 /* Characters.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +192,7 @@
 				C5A1D036291311740035D740 /* ViewController.swift in Sources */,
 				C5A1D032291311740035D740 /* AppDelegate.swift in Sources */,
 				C5A1D034291311740035D740 /* SceneDelegate.swift in Sources */,
+				C5A1D051291319A20035D740 /* Characters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
