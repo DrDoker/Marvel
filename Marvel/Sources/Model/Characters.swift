@@ -7,20 +7,20 @@
 
 import Foundation
 
-struct ApiResponse: Codable {
+struct CharactersApiResponse: Decodable {
 	let code: Int
-	let characters: Characters
+	let charactersData: Characters
 	
 	enum CodingKeys: String, CodingKey {
 		case code
-		case characters = "data"
+		case charactersData = "data"
 	}
 }
 
-struct Characters: Codable {
+struct Characters: Decodable {
 	let total: Int
 	let count: Int
-	let character: [Character]
+	let characters: [Character]
 	
 	enum CodingKeys: String, CodingKey {
 		case total
@@ -29,7 +29,7 @@ struct Characters: Codable {
 	}
 }
 
-struct Character: Codable {
+struct Character: Decodable {
 	let id: Int
 	let name: String
 	let description: String
