@@ -10,12 +10,58 @@ import Alamofire
 
 class CharactersViewController: UIViewController {
 	
+	var characters: [Character] = []
+	
+	lazy var tableView: UITableView = {
+		let table = UITableView(frame: .zero, style: .grouped)
+		table.register(CharactersTableViewCell.self, forCellReuseIdentifier: CharactersTableViewCell.identifier)
+		table.delegate = self
+		table.dataSource = self
+		return table
+	}()
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		view.backgroundColor = .white
 		fetchCharacter()
+		setupHierarchy()
+		setupLayout()
+	}
+	
+	// MARK: - Setup
+	
+	private func setupHierarchy() {
+		view.addSubview(tableView)
+	}
+	
+	private func setupLayout() {
+		tableView.snp.makeConstraints { make in
+			make.top.left.right.bottom.equalTo(view)
+		}
 	}
 }
+
+extension CharactersViewController: UITableViewDataSource, UITableViewDelegate {
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		130
+	}
+	
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return self.characters.count
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCell(withIdentifier: CharactersTableViewCell.identifier) as? CharactersTableViewCell
+		guard let cell = cell else { return UITableViewCell() }
+		cell.character = characters[indexPath.row]
+		return cell
+	}
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
+		print(characters[indexPath.row])
+	}
+}
+
 
 extension CharactersViewController {
 	
@@ -25,12 +71,8 @@ extension CharactersViewController {
 		let request = AF.request(testURL)
 		request.responseDecodable(of: CharactersApiResponse.self) { (data) in
 			guard let data = data.value else { return }
-			data.charactersData.characters.forEach { (character) in
-				print()
-				print(character.name)
-				print(character.thumbnail.thumbnailURL)
-				print(character.description)
-			}
+			self.characters = data.charactersData.characters
+			self.tableView.reloadData()
 		}
 	}
 }

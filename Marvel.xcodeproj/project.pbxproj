@@ -16,6 +16,8 @@
 		C5A1D04E291316AC0035D740 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C5A1D04D291316AC0035D740 /* SnapKit */; };
 		C5A1D051291319A20035D740 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A1D050291319A20035D740 /* Characters.swift */; };
 		C5A1D055291339780035D740 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A1D054291339780035D740 /* MainViewController.swift */; };
+		C5A1D058291346340035D740 /* CharactersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A1D057291346340035D740 /* CharactersTableViewCell.swift */; };
+		C5A1D05B291347BB0035D740 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = C5A1D05A291347BB0035D740 /* AlamofireImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,7 @@
 		C5A1D03F291311750035D740 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5A1D050291319A20035D740 /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
 		C5A1D054291339780035D740 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C5A1D057291346340035D740 /* CharactersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +40,7 @@
 			files = (
 				C5A1D04B291315DD0035D740 /* Alamofire in Frameworks */,
 				C5A1D04E291316AC0035D740 /* SnapKit in Frameworks */,
+				C5A1D05B291347BB0035D740 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +104,7 @@
 		C5A1D048291315040035D740 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C5A1D056291345FA0035D740 /* Cells */,
 				C5A1D035291311740035D740 /* CharactersViewController.swift */,
 				C5A1D054291339780035D740 /* MainViewController.swift */,
 			);
@@ -112,6 +117,14 @@
 				C5A1D050291319A20035D740 /* Characters.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C5A1D056291345FA0035D740 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C5A1D057291346340035D740 /* CharactersTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +146,7 @@
 			packageProductDependencies = (
 				C5A1D04A291315DD0035D740 /* Alamofire */,
 				C5A1D04D291316AC0035D740 /* SnapKit */,
+				C5A1D05A291347BB0035D740 /* AlamofireImage */,
 			);
 			productName = Marvel;
 			productReference = C5A1D02E291311740035D740 /* Marvel.app */;
@@ -165,6 +179,7 @@
 			packageReferences = (
 				C5A1D049291315DD0035D740 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				C5A1D04C291316AC0035D740 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				C5A1D059291347BB0035D740 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = C5A1D02F291311740035D740 /* Products */;
 			projectDirPath = "";
@@ -195,6 +210,7 @@
 				C5A1D036291311740035D740 /* CharactersViewController.swift in Sources */,
 				C5A1D032291311740035D740 /* AppDelegate.swift in Sources */,
 				C5A1D034291311740035D740 /* SceneDelegate.swift in Sources */,
+				C5A1D058291346340035D740 /* CharactersTableViewCell.swift in Sources */,
 				C5A1D051291319A20035D740 /* Characters.swift in Sources */,
 				C5A1D055291339780035D740 /* MainViewController.swift in Sources */,
 			);
@@ -422,6 +438,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		C5A1D059291347BB0035D740 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -434,6 +458,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C5A1D04C291316AC0035D740 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		C5A1D05A291347BB0035D740 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5A1D059291347BB0035D740 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
