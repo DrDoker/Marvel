@@ -11,6 +11,7 @@ import Alamofire
 class CharactersViewController: UIViewController {
 	
 	var characters: [Character] = []
+	var name: String = ""
 	
 	lazy var tableView: UITableView = {
 		let table = UITableView(frame: .zero, style: .grouped)
@@ -20,11 +21,18 @@ class CharactersViewController: UIViewController {
 		return table
 	}()
 	
+	// MARK: - Lifecycle
+	
+	convenience init(name: String) {
+		self.init()
+		self.name = name
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		fetchCharacter()
 		setupHierarchy()
 		setupLayout()
+		fetchCharacter(nameStartsWith: name)
 	}
 	
 	// MARK: - Setup
@@ -65,18 +73,15 @@ extension CharactersViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension CharactersViewController {
 	
-	func fetchCharacter() {
-		let testURL = "https://gateway.marvel.com/v1/public/characters?nameStartsWith=Spider&orderBy=-modified&ts=Serhii-Tkachenko&apikey=d8182c561967ebc637775965e3484849&hash=c4fb21a13465834c8d7d8d816f45c16a"
-		
-		let request = AF.request(testURL)
-		request.responseDecodable(of: CharactersApiResponse.self) { (data) in
-			guard let data = data.value else { return }
-			self.characters = data.charactersData.characters
-			self.tableView.reloadData()
+	func fetchCharacter(nameStartsWith: String) {
+		NetworkService.shared.fetchData(searchItem: nameStartsWith) { [weak self] result in
+			switch result {
+			case .success(let data):
+				self?.characters = data.charactersData.characters
+				self?.tableView.reloadData()
+			case .failure(let error):
+				print(error.localizedDescription)
+			}
 		}
 	}
 }
-
-
-
-

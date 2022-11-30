@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C55A32B72937D1110060A1CA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55A32B62937D1110060A1CA /* NetworkService.swift */; };
+		C55A32BA2937DDA20060A1CA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55A32B92937DDA20060A1CA /* Constants.swift */; };
+		C55A32BD2937DEEB0060A1CA /* String + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55A32BC2937DEEB0060A1CA /* String + Ext.swift */; };
 		C5A1D032291311740035D740 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A1D031291311740035D740 /* AppDelegate.swift */; };
 		C5A1D034291311740035D740 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A1D033291311740035D740 /* SceneDelegate.swift */; };
 		C5A1D036291311740035D740 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A1D035291311740035D740 /* CharactersViewController.swift */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C55A32B62937D1110060A1CA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		C55A32B92937DDA20060A1CA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C55A32BC2937DEEB0060A1CA /* String + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Ext.swift"; sourceTree = "<group>"; };
 		C5A1D02E291311740035D740 /* Marvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A1D031291311740035D740 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5A1D033291311740035D740 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +53,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C55A32B52937D08B0060A1CA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C55A32B62937D1110060A1CA /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C55A32B82937DD8F0060A1CA /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C55A32B92937DDA20060A1CA /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		C55A32BB2937DEC70060A1CA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C55A32BC2937DEEB0060A1CA /* String + Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C5A1D025291311740035D740 = {
 			isa = PBXGroup;
 			children = (
@@ -76,8 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				C5A1D047291314F30035D740 /* App */,
+				C55A32B52937D08B0060A1CA /* Network */,
 				C5A1D04F2913185A0035D740 /* Model */,
 				C5A1D048291315040035D740 /* ViewControllers */,
+				C55A32BB2937DEC70060A1CA /* Extensions */,
+				C55A32B82937DD8F0060A1CA /* Constants */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -207,12 +240,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C55A32BD2937DEEB0060A1CA /* String + Ext.swift in Sources */,
 				C5A1D036291311740035D740 /* CharactersViewController.swift in Sources */,
 				C5A1D032291311740035D740 /* AppDelegate.swift in Sources */,
 				C5A1D034291311740035D740 /* SceneDelegate.swift in Sources */,
 				C5A1D058291346340035D740 /* CharactersTableViewCell.swift in Sources */,
 				C5A1D051291319A20035D740 /* Characters.swift in Sources */,
 				C5A1D055291339780035D740 /* MainViewController.swift in Sources */,
+				C55A32B72937D1110060A1CA /* NetworkService.swift in Sources */,
+				C55A32BA2937DDA20060A1CA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

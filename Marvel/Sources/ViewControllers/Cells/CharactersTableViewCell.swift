@@ -27,7 +27,7 @@ class CharactersTableViewCell: UITableViewCell {
 			characterImage.af.setImage(withURL: imageURL)
 		}
 	}
-	
+
 	//MARK: - Outlets
 	
 	lazy var characterImage: UIImageView = {
