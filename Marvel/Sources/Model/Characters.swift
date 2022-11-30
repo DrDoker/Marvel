@@ -51,4 +51,3 @@ struct Thumbnail: Codable {
 		path + "." + thumbnailExtension
 	}
 }
-

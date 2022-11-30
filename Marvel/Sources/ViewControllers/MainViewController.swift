@@ -33,7 +33,7 @@ class MainViewController: UIViewController {
 	
 	
 	// MARK: - Lifecycle
-	
+		
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		view.backgroundColor = .systemYellow
@@ -68,7 +68,9 @@ class MainViewController: UIViewController {
 	// MARK: - Actions
 	
 	@objc func search() {
-		navigationController?.pushViewController(CharactersViewController(), animated: true)
+		guard let searchText = searchTextField.text, searchText != "" else { return }
+		let charactersViewController = CharactersViewController(name: searchText)
+		navigationController?.pushViewController(charactersViewController, animated: true)
 	}
-	
 }
+
