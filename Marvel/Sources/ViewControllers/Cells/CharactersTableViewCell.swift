@@ -10,7 +10,7 @@ import AlamofireImage
 
 class CharactersTableViewCell: UITableViewCell {
 	
-	static let identifier = "charactersCell"
+	static let identifier = "CharactersCell"
 	
 	var character: Character? {
 		didSet {
