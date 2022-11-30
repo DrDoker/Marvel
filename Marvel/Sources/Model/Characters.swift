@@ -48,7 +48,7 @@ struct Thumbnail: Codable {
 	}
 	
 	var thumbnailURL: String {
-		path + thumbnailExtension
+		path + "." + thumbnailExtension
 	}
 }
 
