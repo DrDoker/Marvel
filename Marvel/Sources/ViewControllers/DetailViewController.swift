@@ -17,6 +17,8 @@ class DetailViewController: UIViewController {
 	
 	private lazy var characterName: UILabel = {
 		let label = UILabel()
+		label.textColor = .black
+		label.font = UIFont.systemFont(ofSize: 22, weight: .bold)
 		return label
 	}()
 	
@@ -68,7 +70,7 @@ class DetailViewController: UIViewController {
 		}
 		
 		tableView.snp.makeConstraints { make in
-			make.top.equalTo(characterImage.snp.bottom).offset(20)
+			make.top.equalTo(characterImage.snp.bottom).offset(40)
 			make.left.right.bottom.equalTo(view)
 		}
 	}
@@ -81,6 +83,10 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return self.comics.count
+	}
+	
+	func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+	   return "Comics"
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
