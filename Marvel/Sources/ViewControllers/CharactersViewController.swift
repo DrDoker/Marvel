@@ -10,6 +10,8 @@ import Alamofire
 
 class CharactersViewController: UIViewController {
 	
+	// MARK: - Properties
+	
 	var characters: [Character] = []
 	var name: String = ""
 	
@@ -30,9 +32,9 @@ class CharactersViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		fetchCharacter(nameStartsWith: name)
 		setupHierarchy()
 		setupLayout()
-		fetchCharacter(nameStartsWith: name)
 	}
 	
 	// MARK: - Setup
@@ -66,10 +68,11 @@ extension CharactersViewController: UITableViewDataSource, UITableViewDelegate {
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableView.deselectRow(at: indexPath, animated: true)
-		print(characters[indexPath.row])
+		let detailViewController = DetailViewController()
+		detailViewController.configureWith(model: characters[indexPath.row])
+		present(detailViewController, animated: true)
 	}
 }
-
 
 extension CharactersViewController {
 	

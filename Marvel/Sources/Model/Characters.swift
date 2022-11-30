@@ -34,7 +34,7 @@ struct Character: Decodable {
 	let name: String
 	let description: String
 	let thumbnail: Thumbnail
-//	let comics: Comics
+	let comics: Comics
 	
 }
 
@@ -50,4 +50,12 @@ struct Thumbnail: Codable {
 	var thumbnailURL: String {
 		path + "." + thumbnailExtension
 	}
+}
+
+struct Comics: Codable {
+	let items: [ComicsItem]
+}
+
+struct ComicsItem: Codable {
+	let name: String
 }
