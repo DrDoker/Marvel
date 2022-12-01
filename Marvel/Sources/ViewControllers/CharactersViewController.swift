@@ -32,9 +32,9 @@ class CharactersViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		fetchCharacter(nameStartsWith: name)
 		setupHierarchy()
 		setupLayout()
+		fetchCharacter(nameStartsWith: name)
 	}
 	
 	// MARK: - Setup
