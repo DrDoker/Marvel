@@ -39,7 +39,7 @@ class MainViewController: UIViewController {
 	
 	private lazy var searchButton: UIButton = {
 		let button = UIButton(type: .system)
-		button.setTitle("Искать", for: .normal)
+		button.setTitle("Search", for: .normal)
 		button.tintColor = .white
 		button.backgroundColor = UIColor(named: "searchButtonColor")
 		button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
