@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C540959E2938C25300D36F76 /* UIViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C540959D2938C25300D36F76 /* UIViewController + Ext.swift */; };
+		C54095A02938F77000D36F76 /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C540959F2938F77000D36F76 /* UIImage+Ext.swift */; };
+		C54095A32938F85200D36F76 /* marvelLoad.gif in Resources */ = {isa = PBXBuildFile; fileRef = C54095A22938F85200D36F76 /* marvelLoad.gif */; };
 		C55A32B72937D1110060A1CA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55A32B62937D1110060A1CA /* NetworkService.swift */; };
 		C55A32BA2937DDA20060A1CA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55A32B92937DDA20060A1CA /* Constants.swift */; };
 		C55A32BD2937DEEB0060A1CA /* String + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55A32BC2937DEEB0060A1CA /* String + Ext.swift */; };
@@ -27,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		C540959D2938C25300D36F76 /* UIViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Ext.swift"; sourceTree = "<group>"; };
+		C540959F2938F77000D36F76 /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
+		C54095A22938F85200D36F76 /* marvelLoad.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = marvelLoad.gif; sourceTree = "<group>"; };
 		C55A32B62937D1110060A1CA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		C55A32B92937DDA20060A1CA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C55A32BC2937DEEB0060A1CA /* String + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Ext.swift"; sourceTree = "<group>"; };
@@ -57,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C54095A12938F7DC00D36F76 /* Gifs */ = {
+			isa = PBXGroup;
+			children = (
+				C54095A22938F85200D36F76 /* marvelLoad.gif */,
+			);
+			path = Gifs;
+			sourceTree = "<group>";
+		};
 		C55A32B52937D08B0060A1CA /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +90,7 @@
 			children = (
 				C55A32BC2937DEEB0060A1CA /* String + Ext.swift */,
 				C540959D2938C25300D36F76 /* UIViewController + Ext.swift */,
+				C540959F2938F77000D36F76 /* UIImage+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -123,6 +136,7 @@
 		C5A1D046291314C50035D740 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C54095A12938F7DC00D36F76 /* Gifs */,
 				C5A1D03A291311750035D740 /* Assets.xcassets */,
 				C5A1D03C291311750035D740 /* LaunchScreen.storyboard */,
 				C5A1D03F291311750035D740 /* Info.plist */,
@@ -234,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C54095A32938F85200D36F76 /* marvelLoad.gif in Resources */,
 				C5A1D03E291311750035D740 /* LaunchScreen.storyboard in Resources */,
 				C5A1D03B291311750035D740 /* Assets.xcassets in Resources */,
 			);
@@ -255,6 +270,7 @@
 				C5A1D051291319A20035D740 /* Characters.swift in Sources */,
 				C5A1D055291339780035D740 /* MainViewController.swift in Sources */,
 				C55A32BF2937F2550060A1CA /* DetailViewController.swift in Sources */,
+				C54095A02938F77000D36F76 /* UIImage+Ext.swift in Sources */,
 				C55A32B72937D1110060A1CA /* NetworkService.swift in Sources */,
 				C55A32BA2937DDA20060A1CA /* Constants.swift in Sources */,
 			);
