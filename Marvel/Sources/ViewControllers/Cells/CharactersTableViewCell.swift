@@ -16,13 +16,11 @@ class CharactersTableViewCell: UITableViewCell {
 		didSet {
 			title.text = character?.name
 			secondTitle.text = character?.description
+			characterImage.image = UIImage(named: "DefaultCharacterImage")
 			
 			guard let url = character?.thumbnail.thumbnailURL,
 				  let imageURL = URL(string: url)
-			else {
-				characterImage.image = UIImage(named: "me")
-				return
-			}
+			else { return }
 			
 			characterImage.af.setImage(withURL: imageURL)
 		}

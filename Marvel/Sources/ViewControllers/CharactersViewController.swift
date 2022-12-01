@@ -32,7 +32,7 @@ class CharactersViewController: UIViewController {
 	
 	private lazy var notFoundImageView: UIImageView = {
 		let imageView = UIImageView()
-		imageView.image = UIImage(named: "notFoundGroot")
+		imageView.image = UIImage(named: "NotFoundGroot")
 		imageView.contentMode = .scaleAspectFit
 		return imageView
 	}()

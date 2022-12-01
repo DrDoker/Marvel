@@ -104,15 +104,10 @@ extension DetailViewController {
 	func configureWith(model: Character) {
 		self.characterName.text = model.name
 		self.comics = model.comics.items
+		characterImage.image = UIImage(named: "DefaultCharacterImage")
 		
 		let url = model.thumbnail.thumbnailURL
-		
-		guard let imageURL = URL(string: url)
-		else {
-			characterImage.image = UIImage(named: "me")
-			return
-		}
-		
+		guard let imageURL = URL(string: url) else { return }
 		characterImage.af.setImage(withURL: imageURL)
 	}
 }
