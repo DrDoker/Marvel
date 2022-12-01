@@ -15,12 +15,46 @@ class CharactersViewController: UIViewController {
 	var characters: [Character] = []
 	var name: String = ""
 	
-	lazy var tableView: UITableView = {
+	private lazy var loadingImageView: UIImageView = {
+		let imageView = UIImageView()
+		imageView.image = UIImage.gifImageWithName("marvelLoad")
+		imageView.contentMode = .scaleAspectFit
+		return imageView
+	}()
+	
+	private lazy var tableView: UITableView = {
 		let table = UITableView(frame: .zero, style: .grouped)
 		table.register(CharactersTableViewCell.self, forCellReuseIdentifier: CharactersTableViewCell.identifier)
 		table.delegate = self
 		table.dataSource = self
 		return table
+	}()
+	
+	private lazy var notFoundImageView: UIImageView = {
+		let imageView = UIImageView()
+		imageView.image = UIImage(named: "notFoundGroot")
+		imageView.contentMode = .scaleAspectFit
+		return imageView
+	}()
+	
+	lazy var notFoundLabel: UILabel = {
+		let lable = UILabel()
+		lable.textColor = .black
+		lable.font = UIFont.systemFont(ofSize: 25, weight: .bold)
+		lable.text = "It's all bullshit, nothing was found"
+		lable.textAlignment = .center
+		lable.numberOfLines = 0
+		return lable
+	}()
+	
+	private lazy var notFoundStackView: UIStackView = {
+		let stackView = UIStackView()
+		stackView.axis = .vertical
+		stackView.distribution = .fill
+		stackView.alignment = .fill
+		stackView.spacing = 30
+		stackView.isHidden = true
+		return stackView
 	}()
 	
 	// MARK: - Lifecycle
@@ -41,9 +75,26 @@ class CharactersViewController: UIViewController {
 	
 	private func setupHierarchy() {
 		view.addSubview(tableView)
+		view.addSubview(loadingImageView)
+		view.addSubview(notFoundStackView)
+		notFoundStackView.addArrangedSubview(notFoundImageView)
+		notFoundStackView.addArrangedSubview(notFoundLabel)
 	}
 	
 	private func setupLayout() {
+		loadingImageView.snp.makeConstraints { make in
+			make.center.equalTo(view)
+			make.width.equalTo(220)
+		}
+		
+		notFoundStackView.snp.makeConstraints { make in
+			make.center.equalTo(view)
+			make.left.equalTo(view).offset(30)
+			make.right.equalTo(view).offset(-30)
+			make.height.equalTo(300)
+
+		}
+		
 		tableView.snp.makeConstraints { make in
 			make.top.left.right.bottom.equalTo(view)
 		}
@@ -80,11 +131,16 @@ extension CharactersViewController {
 		NetworkService.shared.fetchData(searchItem: nameStartsWith) { [weak self] result in
 			switch result {
 			case .success(let data):
-				self?.characters = data.charactersData.characters
-				self?.tableView.reloadData()
+				if data.charactersData.total == 0 {
+					self?.notFoundStackView.isHidden = false
+				} else {
+					self?.characters = data.charactersData.characters
+					self?.tableView.reloadData()
+				}
 			case .failure(let error):
-				print(error.localizedDescription)
+				self?.showAlert(withTitle: "Error", andMessage: error.localizedDescription)
 			}
+			self?.loadingImageView.isHidden = true
 		}
 	}
 }
