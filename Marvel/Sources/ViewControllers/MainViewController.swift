@@ -48,7 +48,6 @@ class MainViewController: UIViewController {
 		return button
 	}()
 	
-	
 	// MARK: - Lifecycle
 	
 	override func viewDidLoad() {
@@ -57,7 +56,6 @@ class MainViewController: UIViewController {
 		
 		setupHierarchy()
 		setupLayout()
-		
 	}
 	
 	// MARK: - Setup
