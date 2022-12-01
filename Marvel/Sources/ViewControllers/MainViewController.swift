@@ -29,7 +29,7 @@ class MainViewController: UIViewController {
 	private lazy var searchTextField: UITextField = {
 		let textField = UITextField()
 		textField.attributedPlaceholder = NSAttributedString(
-			string: "Введи имя",
+			string: "Enter a character name",
 			attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "placeholderColor") ?? .systemGray6])
 		textField.textAlignment = .center
 		textField.backgroundColor = UIColor(named: "searchTextFieldColor")
@@ -100,9 +100,15 @@ class MainViewController: UIViewController {
 	// MARK: - Actions
 	
 	@objc func search() {
-		guard let searchText = searchTextField.text, searchText != "" else { return }
-		let charactersViewController = CharactersViewController(name: searchText)
-		navigationController?.pushViewController(charactersViewController, animated: true)
+		guard let searchText = searchTextField.text else { return }
+		
+		if searchText == "" {
+			self.showAlert(withTitle: "Warning", andMessage: "Enter a character name")
+		} else {
+			let charactersViewController = CharactersViewController(name: searchText)
+			navigationController?.pushViewController(charactersViewController, animated: true)
+		}
 	}
 }
+
 

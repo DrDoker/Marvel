@@ -80,10 +80,16 @@ extension CharactersViewController {
 		NetworkService.shared.fetchData(searchItem: nameStartsWith) { [weak self] result in
 			switch result {
 			case .success(let data):
+				if data.charactersData.total == 0 {
+					self?.showAlert(withTitle: "Warning", andMessage: "Сharacter not found ")
+					self?.navigationController?.popToRootViewController(animated: true)
+					return
+				}
+				
 				self?.characters = data.charactersData.characters
 				self?.tableView.reloadData()
 			case .failure(let error):
-				print(error.localizedDescription)
+				self?.showAlert(withTitle: "Error", andMessage: error.localizedDescription)
 			}
 		}
 	}

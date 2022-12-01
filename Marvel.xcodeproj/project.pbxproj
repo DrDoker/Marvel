@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C540959E2938C25300D36F76 /* UIViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C540959D2938C25300D36F76 /* UIViewController + Ext.swift */; };
 		C55A32B72937D1110060A1CA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55A32B62937D1110060A1CA /* NetworkService.swift */; };
 		C55A32BA2937DDA20060A1CA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55A32B92937DDA20060A1CA /* Constants.swift */; };
 		C55A32BD2937DEEB0060A1CA /* String + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55A32BC2937DEEB0060A1CA /* String + Ext.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C540959D2938C25300D36F76 /* UIViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Ext.swift"; sourceTree = "<group>"; };
 		C55A32B62937D1110060A1CA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		C55A32B92937DDA20060A1CA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C55A32BC2937DEEB0060A1CA /* String + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Ext.swift"; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				C55A32BC2937DEEB0060A1CA /* String + Ext.swift */,
+				C540959D2938C25300D36F76 /* UIViewController + Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			files = (
 				C55A32BD2937DEEB0060A1CA /* String + Ext.swift in Sources */,
 				C5A1D036291311740035D740 /* CharactersViewController.swift in Sources */,
+				C540959E2938C25300D36F76 /* UIViewController + Ext.swift in Sources */,
 				C5A1D032291311740035D740 /* AppDelegate.swift in Sources */,
 				C5A1D034291311740035D740 /* SceneDelegate.swift in Sources */,
 				C5A1D058291346340035D740 /* CharactersTableViewCell.swift in Sources */,
